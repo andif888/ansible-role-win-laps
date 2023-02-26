@@ -1,0 +1,21 @@
+---
+# defaults file for ansible-role-win-win_laps
+
+# @var win_laps_download_url:description: Download URL
+win_laps_download_url: "https://download.microsoft.com/download/C/7/A/C7AAD914-A8A6-4904-88A1-29E657445D03/LAPS.x64.msi"
+
+# @var win_laps_download_validate_certs:description: If false, SSL certificates will not be validated.
+win_laps_download_validate_certs: true
+
+# @var win_laps_install_args:description: >
+# Any arguments the installer needs to either installthe package.
+# If the package is an MSI do not supply the /qn, /log or /norestart arguments.
+# @end
+win_laps_install_args: "ADDLOCAL=CSE ALLUSERS=1"
+
+# @var win_laps_install_product_id:description: >
+# The product id of the installed packaged.
+# This is used for checking whether the product is already installed.
+# @end
+win_laps_install_product_id: '{97E2CA7B-B657-4FF7-A6DB-30ECC73E1E28}'
+...

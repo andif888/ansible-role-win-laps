@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-win-win_laps
+- name: Download and install
+  ansible.windows.win_package:
+    arguments: "{{ win_laps_install_args }}"
+    path: "{{ win_laps_download_url }}"
+    product_id: "{{ win_laps_install_product_id }}"
+    state: present
+    validate_certs: "{{ win_laps_download_validate_certs }}"
+...
