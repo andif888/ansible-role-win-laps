@@ -41,6 +41,10 @@ win_laps_download_validate_certs: true
 
 Any arguments the installer needs to either installthe package. If the package is an MSI do not supply the /qn, /log or /norestart arguments.
 
+All Additional components (GPO Extension, Management Tools, Fat Client UI, PowerShell Module, GPO Editor Templates)
+
+``` ADDLOCAL=CSE,Management,Management.UI,Management.PS,Management.ADMX ```
+
 #### Default value
 
 ```YAML
